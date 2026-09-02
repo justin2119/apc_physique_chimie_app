@@ -1,0 +1,6 @@
+import '../../domain/entities/exam_subject.dart';
+class ExamSubjectModel extends ExamSubject {
+ const ExamSubjectModel({required super.id,required super.title,required super.targetClass,required super.discipline,required super.chapter,required super.contextProblem,required super.questions,required super.criteria,required super.markingScheme,required super.solution,required super.createdAt,super.isSavedOffline});
+ factory ExamSubjectModel.fromJson(Map<String,dynamic> j)=>ExamSubjectModel(id:j['id']??'',title:j['title']??'',targetClass:j['targetClass']??'',discipline:j['discipline']??'',chapter:j['chapter']??'',contextProblem:j['contextProblem']??'',questions:List<String>.from(j['questions']??[]),criteria:List<String>.from(j['criteria']??['CM1','CM2','CM3','CP']),markingScheme:j['markingScheme']??'',solution:j['solution']??'',createdAt:DateTime.tryParse(j['createdAt']??'')??DateTime.now(),isSavedOffline:j['isSavedOffline']??false);
+ Map<String,dynamic> toJson()=>{'id':id,'title':title,'targetClass':targetClass,'discipline':discipline,'chapter':chapter,'contextProblem':contextProblem,'questions':questions,'criteria':criteria,'markingScheme':markingScheme,'solution':solution,'createdAt':createdAt.toIso8601String(),'isSavedOffline':isSavedOffline};
+}
