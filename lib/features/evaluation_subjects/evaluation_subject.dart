@@ -1,0 +1,5 @@
+class EvaluationSubject { final String id,title,level,discipline,statement,criteria; const EvaluationSubject({required this.id,required this.title,required this.level,required this.discipline,required this.statement,required this.criteria}); }
+const preloadedSubjects = <EvaluationSubject>[
+ EvaluationSubject(id:'bac1',title:'Sujet Type BAC 1 – Mécanique',level:'1ère C/D',discipline:'Physique',statement:'Au champ de tir de Lomé / Vogan, un projectile est lancé avec une vitesse initiale. Étudier sa trajectoire, déterminer sa portée et vérifier les conditions de sécurité.',criteria:'CM1 – Pertinence ; CM2 – Utilisation correcte des outils ; CM3 – Cohérence ; CP – Perfectionnement / Présentation.'),
+ EvaluationSubject(id:'bac2',title:'Sujet Type BAC 2 – Dosage acido-basique',level:'Tle C/D',discipline:'Chimie',statement:'On dose l’acide éthanoïque d’un vinaigre commercial ou d’un jus local par une solution basique. Exploiter la courbe pH-métrique et déterminer la concentration.',criteria:'CM1 – Pertinence ; CM2 – Utilisation correcte des outils ; CM3 – Cohérence ; CP – Perfectionnement / Présentation.'),
+];
